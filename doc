@@ -1,0 +1,117 @@
+zshrc
+
+export PATH="$PATH:/opt/homebrew/bin"
+export PATH=/opt/homebrew/opt/openjdk@17/bin:$PATH
+export PATH=$PATH:/Users/sudhakarg/apache-maven-3.9.5/bin
+export PATH=$HOME/Documents/flutter/bin:$PATH
+
+
+cache		
+
+
+
+remote-cache-name: "testcache"
+#remote-cache-name: "TestLocalCache"
+
+infinispan:
+  cacheURL: "https://test-datagrid-external-test-datagrid.apps.ocp2-lab.menalab.corp.local/rest/v2/caches/"
+  cacheName: "testcache"
+  hostName: "test-datagrid-external-test-datagrid.apps.ocp2-lab.menalab.corp.local"
+  client:
+    hotrod:
+#      server-list: "192.152.252.63:11222"
+      auth-username: "developer"
+      auth-password: "haEfpLJNkirpxvrJ"
+      server-list: "127.0.0.1:11222"
+#      auth-username: "admin"
+#      auth-password: "changeme"
+      auth-realm: "default"
+#      sasl-mechanism: "SCRAM-SHA-512"
+      sasl-mechanism: "DIGEST-MD5"
+  cache:
+    default:
+      mode: LOCAL  # Cache mode (LOCAL, REPL, DIST, etc.)
+      timeToLiveSeconds: 3600  # TTL for the cache entries in seconds
+      maxIdleTimeSeconds: 3600 # Max idle time in seconds
+    testcache:
+      mode: DIST  # A distributed cache example
+      owners: 2    # Number of cache owners (in distributed mode)
+      timeToLiveSeconds: 600  # TTL for this cache
+  enabled: true
+
+
+Product.id -> Web is sending even if it is empty
+                            "accountNumber": "2000137931",
+
+kubectl apply -f sidecar-deployment.yaml   
+kubectl apply -f k8s/fluentd-configmap.yaml -n logging  
+
+kubectl get pods
+kubectl describe pod sidecar-demo-768b7bbd57-lltnk
+
+
+3 headers added in application yaml
+org.apache.camel.processor.errorhandler.DefaultErrorHandler: OFF
+graphql:
+  schema:
+    introspection:
+      enabled: ${GRAPHQL_SCHEMA_INTROSPECTION_ENABLED}
+graphiql:
+  login:
+    username: ${GRAPHIQL_LOGIN_USERNAME}
+    password: ${GRAPHIQL_LOGIN_ENCODED_PASSWORD}
+
+bffUser
+Bff@202k
+
+feature/checkOnboardingAllowedChanges
+
+
+Introspection
+
+{
+  "query": "query IntrospectionQuery { __schema { types { name kind fields { name } } } }"
+}
+
+cache		
+
+
+
+remote-cache-name: "testcache"
+#remote-cache-name: "TestLocalCache"
+
+infinispan:
+  cacheURL: "https://test-datagrid-external-test-datagrid.apps.ocp2-lab.menalab.corp.local/rest/v2/caches/"
+  cacheName: "testcache"
+  hostName: "test-datagrid-external-test-datagrid.apps.ocp2-lab.menalab.corp.local"
+  client:
+    hotrod:
+#      server-list: "192.152.252.63:11222"
+      auth-username: "developer"
+      auth-password: "haEfpLJNkirpxvrJ"
+      server-list: "127.0.0.1:11222"
+#      auth-username: "admin"
+#      auth-password: "changeme"
+      auth-realm: "default"
+#      sasl-mechanism: "SCRAM-SHA-512"
+      sasl-mechanism: "DIGEST-MD5"
+  cache:
+    default:
+      mode: LOCAL  # Cache mode (LOCAL, REPL, DIST, etc.)
+      timeToLiveSeconds: 3600  # TTL for the cache entries in seconds
+      maxIdleTimeSeconds: 3600 # Max idle time in seconds
+    testcache:
+      mode: DIST  # A distributed cache example
+      owners: 2    # Number of cache owners (in distributed mode)
+      timeToLiveSeconds: 600  # TTL for this cache
+  enabled: true
+
+
+Product.id -> Web is sending even if it is empty
+                            "accountNumber": "2000137931",
+
+
+
+Should be disabled in production
+
+spring.graphql.schema.introspection.enabled=false
